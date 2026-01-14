@@ -284,10 +284,20 @@ body {
 
     .hero {
         min-height: 80vh;
+        transition: padding-top 0.3s ease;
+    }
+
+    body:has(.menu-btn:checked) .hero {
+        padding-top: 200px;
     }
 
     .hero-container {
         padding: 120px 20px 60px;
+        transition: padding-top 0.3s ease;
+    }
+
+    body:has(.menu-btn:checked) .hero-container {
+        padding-top: 180px;
     }
 
     .hero-title {
