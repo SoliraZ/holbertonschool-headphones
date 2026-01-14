@@ -1,7 +1,6 @@
 /* Hero Section (only)
       ============================= */
 
-/* Base minimal (needed for hero to look correct) */
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +37,67 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 20;
+    position: absolute;
+    left: 20px;
+}
+
+.menu-icon .navicon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.menu-icon .navicon::before,
+.menu-icon .navicon::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.menu-icon .navicon::before {
+    top: -8px;
+}
+
+.menu-icon .navicon::after {
+    bottom: -8px;
+}
+
+.menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked~.menu-icon .navicon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.header-logo {
+    flex: 1;
+    text-align: center;
 }
 
 .header-logo a {
@@ -49,9 +109,7 @@ body {
     height: 32px;
 }
 
-.navbar-menu {
-    /* Navigation menu */
-}
+.navbar-menu {}
 
 .nav {
     list-style: none;
@@ -59,9 +117,7 @@ body {
     gap: 40px;
 }
 
-.nav-item {
-    /* Navigation item */
-}
+.nav-item {}
 
 .nav-link {
     text-decoration: none;
@@ -77,6 +133,7 @@ body {
 .nav-link:active {
     color: #FF6565;
 }
+
 
 .hero {
     position: relative;
@@ -125,7 +182,6 @@ body {
     margin-right: auto;
 }
 
-/* Button (used inside hero) */
 .btn {
     padding: 15px 30px;
     border: none;
@@ -161,19 +217,69 @@ body {
 /* Mobile hero - 480px or less */
 @media (max-width: 480px) {
     .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
         padding: 20px 0;
     }
 
     .header-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        position: relative;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        transform: none;
+        z-index: 20;
+    }
+
+    .header-logo {
+        text-align: center;
+        flex: 1;
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    .menu-overlay {
+        display: none;
+    }
+
+    .navbar-menu {
+        width: 100%;
+        background-color: transparent;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+        margin: 20px auto 0;
+        order: 3;
+    }
+
+    .menu-btn:checked~.navbar-menu {
+        max-height: 300px;
+        padding-bottom: 10px;
     }
 
     .nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        display: block;
         text-align: center;
+        padding: 5px 0;
     }
 
     .hero {
@@ -181,7 +287,7 @@ body {
     }
 
     .hero-container {
-        padding: 100px 20px 60px;
+        padding: 120px 20px 60px;
     }
 
     .hero-title {
