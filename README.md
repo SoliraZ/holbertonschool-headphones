@@ -12,7 +12,7 @@ Below is the design you need to recreate. Study it carefully to understand the l
 
 ![Design Preview](https://i.ibb.co/8gFFXL64/60df485eb772ecbad54a.jpg)
 
-**Design Reference**: [View Full Design](https://i.ibb.co/8gFFXL64/60df485eb772ecbad54a.jpg)
+**Design Reference**: [View Full Design in Figma](https://www.figma.com/file/FfnVADRC9xgI3yiZliTBYZ/Holberton-School---Headphone-company)
 
 The design shows:
 - The complete layout and structure
