@@ -103,7 +103,6 @@ body {
 }
 
 .header-logo {
-    flex: 0;
     text-align: left;
 }
 
@@ -136,7 +135,6 @@ body {
 .nav-link:active {
     color: #FF6565;
 }
-
 
 .hero {
     position: relative;
@@ -248,10 +246,6 @@ body {
         flex: 1;
         margin-left: 45px;
         margin-right: 45px;
-    }
-
-    .menu-overlay {
-        display: none;
     }
 
     .navbar-menu {
@@ -615,7 +609,6 @@ body {
 
 .contact-us-form textarea {
     resize: none;
-    min-height: auto;
     padding-bottom: 8px;
 }
 
@@ -671,9 +664,6 @@ body {
     padding: 0;
 }
 
-.footer-social-link {
-    margin: 0;
-}
 
 .footer-social-link-icon {
     display: flex;
