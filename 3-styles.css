@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -519,6 +523,11 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+
+    .our-results-card img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -538,9 +547,14 @@ body {
     }
 
     .our-results-cards {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
         padding: 0 20px;
+    }
+
+    .our-results-card img {
+        max-width: 100%;
+        height: auto;
     }
 
     .our-results-card-title {
@@ -549,5 +563,96 @@ body {
 
     .our-results-card-subtitle {
         font-size: 13px;
+    }
+}
+
+/* Contact us section */
+
+.contact-us {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.contact-us-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-us-title {
+    font-size: 32px;
+    font-weight: var(--font-weight-semibold);
+    color: #071629;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.contact-us-form input,
+.contact-us-form textarea {
+    border: none;
+    border-bottom: 1px solid #071629;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    color: #071629;
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: none;
+    position: relative;
+    background-image: linear-gradient(to right, #FF6565 0%, #FF6565 0%);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background-size 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.contact-us-form input::placeholder,
+.contact-us-form textarea::placeholder {
+    color: #071629;
+    opacity: 1;
+    font-weight: var(--font-weight-semibold);
+}
+
+.contact-us-form input:focus,
+.contact-us-form textarea:focus {
+    border-bottom-color: transparent;
+    background-size: 100% 1px;
+}
+
+.contact-us-form textarea {
+    resize: none;
+    min-height: auto;
+    padding-bottom: 8px;
+}
+
+.contact-us-form .btn {
+    margin-top: 10px;
+    align-self: center;
+    width: auto;
+}
+
+/* Mobile - Contact us section */
+@media (max-width: 480px) {
+    .contact-us {
+        padding: 50px 0;
+    }
+
+    .contact-us-container {
+        padding: 0 20px;
+    }
+
+    .contact-us-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .contact-us-form {
+        gap: 18px;
     }
 }
