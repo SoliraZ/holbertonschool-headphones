@@ -28,13 +28,13 @@
                 </label>
                 <nav class="navbar-menu">
                     <ul class="nav">
-                        <li class="nav-item">
+                        <li>
                             <a href="#what-we-do" class="nav-link">what we do</a>
                         </li>
-                        <li class="nav-item">
+                        <li>
                             <a href="#our-results" class="nav-link">our results</a>
                         </li>
-                        <li class="nav-item">
+                        <li>
                             <a href="#contact-us" class="nav-link">contact us</a>
                         </li>
                     </ul>
@@ -63,7 +63,7 @@
     </section>
 
     <!-- What we do section -->
-    <section class="what-we-do">
+    <section class="what-we-do" id="what-we-do">
         <div class="container">
             <div class="what-we-do-container">
                 <h2 class="what-we-do-title">What we do...</h2>
@@ -131,6 +131,22 @@
                     <h3 class="our-results-card-title">+2%</h3>
                     <p class="our-results-card-subtitle">Lorem ipsum dolor</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact us section -->
+    <section class="contact-us" id="contact-us">
+        <div class="container">
+            <div class="contact-us-container">
+                <h2 class="contact-us-title">Contact us</h2>
+                <form class="contact-us-form" action="#">
+                    <input type="text" id="name" placeholder="Name" pattern="[A-Za-zÀ-ž\s]{3,}" required>
+                    <input type="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        required>
+                    <textarea id="message" placeholder="Your message" required></textarea>
+                    <button type="submit" class="btn btn-primary">CALL TO ACTION</button>
+                </form>
             </div>
         </div>
     </section>
