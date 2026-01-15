@@ -649,14 +649,14 @@ body {
 
 .footer {
     background-color: #071629;
-    padding: 60px 0 30px;
+    padding: 80px 0 50px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .footer-logo img {
@@ -698,7 +698,7 @@ body {
     text-align: center;
     font-size: 12px;
     font-weight: var(--font-weight-regular);
-    color: #C0C0C0;
+    color: rgba(255, 255, 255, 0.35);
     margin: 0;
 }
 
