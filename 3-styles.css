@@ -518,18 +518,6 @@ body {
 }
 
 /* Mobile - Our results section */
-@media (max-width: 768px) {
-    .our-results-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .our-results-card img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
 @media (max-width: 480px) {
     .our-results {
         padding: 60px 0;
@@ -547,13 +535,13 @@ body {
     }
 
     .our-results-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 40px;
         padding: 0 20px;
     }
 
     .our-results-card img {
-        max-width: 100%;
+        max-width: 50%;
         height: auto;
     }
 
